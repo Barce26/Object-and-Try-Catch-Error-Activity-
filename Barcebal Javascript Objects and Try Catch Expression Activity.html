@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object and Try Catch Expression Activity</title>
+</head>
+
+
+<body>
+    <script>
+        
+
+
+        // //guide for try and catch 
+        // let add = 100, denominator = 'a';
+
+    
+        // try{
+        //     console.log(numerator/denominator)
+        //     cosole.log(a)
+        // }catch(error){
+        //     console.log("An error has occured")
+        //     console.log('Error'+ error)
+        // }finally{
+        //     console.log('Finally will execute everytime')
+        // }
+
+        
+        // let computed_value;
+
+        function Numbers (num_1,num_2){
+            this.number1 = num_1,
+            this.number2 = num_2,
+
+            this.operations = {
+                add: num_1 + num_2,
+                subtract: num_1 - num_2,
+                multiply: num_1 * num_2,
+                divide: num_1 / num_2,
+
+            }
+
+            try{ if(this.number2 === 0){
+                throw new Error ("Cant Divide if the Number is Zero")
+            }
+
+            }catch(error){
+                document.write(error.message)
+
+            }
+
+
+            //computed_value = num_1 + num_2;
+            document.write("Addition: " + this.number1 + " + " + this.number2 +" = " +this.operations.add + "<br>");
+            document.write("Subtract: " + this.number1 + " - " + this.number2 +" = " +this.operations.subtract + "<br>");
+            document.write("Multiply: " + this.number1 + " * " + this.number2 +" = " +this.operations.multiply + "<br>");
+            document.write("Divide: " + this.number1 + " / " + this.number2 +" = " +this.operations.divide + "<br>");
+        }
+        
+        const add = new Numbers(26,23); 
+            
+        
+        
+
+    </script>
+</body>
+</html>
